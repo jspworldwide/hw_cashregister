@@ -17,18 +17,10 @@ function formatCurrency(total) {
 
 $('#entry').submit(function(e) {
 	e.preventDefault();
-	
-	// capturing value from input
 	var myValue;
 	myValue = $('#newEntry').val();
-
-	// adding value to global variable total
 	total += parseFloat(myValue);
-
-	// updating value of total
 	$('#total').html(formatCurrency(total));
-
-	// adding another row to table body
 	$('table tbody').append(
           "<tr>" +
           "  <td></td>" + 
